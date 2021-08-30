@@ -205,7 +205,8 @@ class openHABSkill(MycroftSkill):
 		#to refresh the openHAB items labeled list we use an intent, we can ask Mycroft to make the refresh
 
 		self.getTaggedItems()
-		dictLenght = str(len(self.lightingItemsDic) + len(self.switchableItemsDic) + len(self.currentTempItemsDic) + len(self.currentHumItemsDic) + len(self.currentThermostatItemsDic) + len(self.targetTemperatureItemsDic) + len(self.homekitHeatingCoolingModeDic) + len(self.shutterItemsDic))		self.speak_dialog('RefreshTaggedItems', {'number_item': dictLenght})
+		dictLenght = str(len(self.lightingItemsDic) + len(self.switchableItemsDic) + len(self.currentTempItemsDic) + len(self.currentHumItemsDic) + len(self.currentThermostatItemsDic) + len(self.targetTemperatureItemsDic) + len(self.homekitHeatingCoolingModeDic) + len(self.shutterItemsDic))
+		self.speak_dialog('RefreshTaggedItems', {'number_item': dictLenght})
 
 	def handle_onoff_status_intent(self, message):
 		command = message.data.get('Command')
